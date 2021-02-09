@@ -1,0 +1,41 @@
+<% include ./partials/header %>
+<head>
+    <style>
+        a{
+            margin-left:5px;
+        }
+    </style>
+</head>
+<body style="background-color:rgb(189, 184, 184);background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+">
+    <div class="container" style="height: 630px;padding:0px auto;">
+        <form action="/login" method="POST" style="width: 600px; margin-left:300px;margin-top:50px;">
+            <h2 style="font-family: algerian-regular">Login</h2>
+            <div>
+                <div class="form-group">
+                    <label for="username">username</label>
+                    <input type="text" class="form-control" name="username" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="radio" name="role" value="donor" checked>donor
+                <input type="radio" name="role" value="recepient">recepient
+                <input type="radio" name="role" value="admin">admin  
+            </div>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+            <div>
+                <p>Not Signed Up?</p>
+                <a href="/signup">Sign up here</a>
+            </div>
+        </form> 
+    </div>
+</body>
+<% include ./partials/footer %>

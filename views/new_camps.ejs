@@ -1,0 +1,28 @@
+<% include ./partials/admin_header %>
+<div class="jumbotron">
+        <div class="container" style="background-color: red; margin:10px; width:500px;">
+            <h1>WELCOME ADMIN</h1>
+        </div>
+</div>
+
+<div class="jumbotron">
+        <div class="jumbotron" style="background-color: aqua">
+                <ul class="list-group list-group-horizontal-lg">
+                    <li class="list-group-item"><a href="/admin/view_donations">View donations</a></li>
+                    <li class="list-group-item"><a href="/admin/new_camps">Add Camps</a></li>
+                </ul>
+        </div>
+</div>
+<div class="jumbotron">
+    <div class="container" style=" margin:10px; width:500px;background-color: rgb(7, 80, 80)">
+        <h2>Add Camp</h2>
+        <form action="/admin/new_camps" method="POST">
+            <p><input type="text" placeholder="place" name="place"></p>
+            <p><input type="text" placeholder="district" name="district"></p>
+            <p><input type="text" placeholder="state" name="state"></p>
+            <p><input type="date" placeholder="date" name="date"></p>
+            <p><input type="submit"></p>
+        </form>
+    </div>
+</div>
+<% include ./partials/footer %>

@@ -1,0 +1,51 @@
+<head>
+    <style>
+        .td1{
+            padding:4px;
+            font-family: algerian-regular;
+            text-align: center;
+
+        }
+        .td2{
+            padding:2px;
+        }
+    </style>
+</head>
+<div class="jumbotron" style="margin-bottom: 0px">
+    <h1>Welcome !!!</h1>
+</div>
+<% include ./partials/header1 %>
+<body>
+<div class="jumbotron" style="margin-bottom: 0px">
+    <div class="jumbotron" style="background-color: aqua">
+        <ul class="list-group list-group-horizontal-lg">
+            <li class="list-group-item"><a href="/donor/donor._id/register">register</a></li>
+            <li class="list-group-item"><a href="/donor/donor._id/donations">view donations</a></li>
+        </ul>
+    </div>
+    <div class="jumbotron" style="background-color: white; text-align: center">
+        <h1 style="font-family: algerian-regular"><strong>Your donations</strong></h1>
+        <div style="margin-left:450px">
+            <table style="border:2px solid black">
+                <tr style="border:2px solid black">
+                    <td class="td1" style="border:4px solid black"><strong>Username</strong></td>
+                    <td class="td1" style="border:4px solid black"><strong>Camp</strong></td>
+                    <td class="td1" style="border:4px solid black"><strong>Quantity</strong></td>
+                    <td class="td1" style="border:4px solid black"><strong>Date</strong></td>
+                    <td class="td1" style="border:4px solid black"><strong>Status</strong></td>
+                </tr>
+                <% donations.forEach(function(donation){ %>
+                    <tr style="border:2px solid black">
+                        <td class="td2" style="border:4px solid black"><%= donation.username %></td>
+                        <td class="td2" style="border:4px solid black"><%= donation.camp %></td>
+                        <td class="td2" style="border:4px solid black"><%= donation.quantity %></td>
+                        <td class="td2" style="border:4px solid black"><%= donation.date %></td>
+                        <td class="td2" style="border:4px solid black"><%= donation.status %></td>
+                    </tr>
+                <% }) %>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+<% include ./partials/footer %>

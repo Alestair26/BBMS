@@ -1,0 +1,19 @@
+<div class="jumbotron" style="margin-bottom: 0px;">
+    <h1>Welcome <%= receiver.username %>!!!</h1>
+</div>
+<% include ./partials/header1 %>
+<div class="jumbotron" style="margin-bottom: 0px;">
+    <div class="jumbotron" style="background-color: aqua">
+        <ul class="list-group list-group-horizontal-lg">
+            <li class="list-group-item"><a href="/receiver/<%= receiver._id %>/register">register</a></li>
+            <li class="list-group-item">
+            <a href="/receiver/<%= receiver.username %>/requests/self">View Request</a>
+            </li>
+        </ul>
+    </div>
+    <div class="jumbotron" style="background-color: white">
+        <h1>Welcome</h1>
+    </div>
+</div>
+
+<% include ./partials/footer %>

@@ -1,0 +1,17 @@
+<div class="jumbotron" style="margin-bottom: 0px;">
+    <h1>Welcome <%= donor.username %>!!!</h1>
+</div>
+<% include ./partials/header1 %>
+<div class="jumbotron" style="margin-bottom: 0px;">
+    <div class="jumbotron" style="background-color: aqua">
+        <ul class="list-group list-group-horizontal-lg">
+            <li class="list-group-item"><a href="/donor/<%= donor._id %>/register">register</a></li>
+            <li class="list-group-item"><a href="/donor/<%= donor._id %>/donations">view donations</a></li>
+        </ul>
+    </div>
+    <div class="jumbotron" style="background-color: white">
+        <h1>Welcome</h1>
+    </div>
+</div>
+
+<% include ./partials/footer %>
